@@ -17,25 +17,25 @@ ErgoGrow bridges this gap by transforming a fragmented process into a single, co
 
 ## Key Features
 
-* **Customized Symptom Assessment**: Tailors wellness routines based on the specific physical focuses (eye strain, neck tension, back/posture stiffness, wrist strain, hip tightness, and tension headaches).
-* **Adaptable Focus Timers**: Features flexible productivity intervals designed to support various working and learning styles, including:
+- **Customized Symptom Assessment**: Tailors wellness routines based on the specific physical focuses (eye strain, neck tension, back/posture stiffness, wrist strain, hip tightness, and tension headaches).
+- **Adaptable Focus Timers**: Features flexible productivity intervals designed to support various working and learning styles, including:
   * Pomodoro (25-minute focus / 5-minute break)
   * 52/17 Rule
   * 90-Minute Cycles
   * Flowtime Technique
-* **Guided Interactive Stretches**: Visual guides featuring live countdown timers, step-by-step instructions, and targeted exercise animations.
-* **Localized Persistence**: Secure local authentication and state management to retain custom user preferences without forcing any cloud dependencies.
-* **OS-Native Desktop Hub**: Built as a dedicated desktop window to live directly where desk work happens, providing frictionless notifications and overlay popups without clogging your browser tabs.
+- **Guided Interactive Stretches**: Visual guides featuring live countdown timers, step-by-step instructions, and targeted exercise animations.
+- **Localized Persistence**: Secure local authentication and state management to retain custom user preferences without forcing any cloud dependencies.
+- **OS-Native Desktop Hub**: Built as a dedicated desktop window to live directly where desk work happens, providing frictionless notifications and overlay popups without clogging your browser tabs.
 
 ---
 
 ## Tech Stack & Architecture
 
-* **Framework**: Electron (Desktop Application Runtime)
-* **Runtime & Environment**: Node.js
-* **Frontend UI**: HTML5, Modern CSS3, and Vanilla JavaScript
-* **State & Storage**: Browser Local Storage and Asynchronous Timers
-* **Media Assets**: Luma AI (Exercise Visualizations) and Custom UI Design
+- **Framework**: Electron (Desktop Application Runtime)
+- **Runtime & Environment**: Node.js
+- **Frontend UI**: HTML5, Modern CSS3, and Vanilla JavaScript
+- **State & Storage**: Browser Local Storage and Asynchronous Timers
+- **Media Assets**: Luma AI (Exercise Visualizations) and Custom UI Design
 
 ---
 
@@ -43,13 +43,13 @@ ErgoGrow bridges this gap by transforming a fragmented process into a single, co
 
 To run ErgoGrow locally on your machine:
 
-* **Clone the repository:**
-  `git clone https://github.com/azeahire28/Congressional-App-Challenge-NEW.git`
-* **Navigate to the project directory:**
+- **Clone the repository:**
+  `git clone https://github.com/azeahire28/Congressional-App-Challenge-ErgoGrow.git`
+- **Navigate to the project directory:**
   `cd Congressional-App-Challenge-ErgoGrow`
-* **Install the dependencies:**
+- **Install the dependencies:**
   `npm install`
-* **Start the application:**
+- **Start the application:**
   `npm start`
 
 ---
@@ -59,7 +59,7 @@ To run ErgoGrow locally on your machine:
 While ErgoGrow currently provides a robust, fully functional desktop MVP, planned future updates include:
 
 1. **Cloud Database Migration**: Transitioning from local storage to Supabase for cross-device synchronization (it'll include seamless switching between laptops and desktop setups).
-2. **OS-System Integration**: Running as a continuous background daemon that's capable of delivering native operating system notifications even when minimized.
+​2. **OS-System Integration**: Running as a continuous background daemon that's capable of delivering native operating system notifications even when minimized.
 3. **Webcam-Based Machine Learning Posture Detection**: Integrating computer vision libraries to analyze posture in real time, triggering the proactive alerts immediately when slouching or neck strain is detected.
 
 ---
