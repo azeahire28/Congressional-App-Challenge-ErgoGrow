@@ -7,11 +7,11 @@
 
 ## Problem Overview & Vision
 
-Modern work and study environments force millions of individuals into prolonged, sedentary screen sessions. While corporate ergonomic tools often focus on expensive physical hardware, such as smart desks or specialized chairs, everyday computer users lack an accessible, unified software solution. 
+Modern work and study environments force millions of individuals into prolonged, sedentary screen sessions. While corporate ergonomic tools often focus on expensive physical hardware, such as smart desks or specialized chairs, so everyday computer users lack an accessible and unified software solution. 
 
 Most people suffer from musculoskeletal strain in silence and on their own by experiencing tech neck, lower back stiffness, wrist tension, and eye strain without proactive tools to build healthy movement habits early. Research shows that short, consistent, and incremental stretching periods throughout the day are far more effective at mitigating long-term discomfort than "sporadic" physical activity.
 
-ErgoGrow bridges this gap by transforming a fragmented process into a single, cohesive desktop experience. Instead of juggling four separate tools—like standalone web timers, generic calendar alerts, YouTube search videos, and manual exercise logs, but ErgoGrow unifies productivity and wellness all in one seamless desktop application.
+ErgoGrow bridges this gap by transforming a fragmented process into a single, cohesive desktop experience. Instead of juggling four separate tools, like standalone web timers, generic calendar alerts, YouTube search videos, and manual exercise logs, but ErgoGrow unifies productivity and wellness all in one seamless desktop application.
 
 ---
 
