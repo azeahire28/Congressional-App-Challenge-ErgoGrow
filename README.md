@@ -67,4 +67,4 @@ While ErgoGrow currently provides a robust, fully functional desktop MVP, planne
 ## Submission Context
 
 Developed for the **Congressional App Challenge (CAC)**.  
-* **Authors**: Aadhila Zeahire Irfaan Ahamed and Harita Dilip
+**Authors**: Aadhila Zeahire Irfaan Ahamed and Harita Dilip
