@@ -46,7 +46,7 @@ To run ErgoGrow locally on your machine:
 * **Clone the repository:**
   `git clone https://github.com/azeahire28/Congressional-App-Challenge-NEW.git`
 * **Navigate to the project directory:**
-  `cd Congressional-App-Challenge-NEW`
+  `cd Congressional-App-Challenge-ErgoGrow`
 * **Install the dependencies:**
   `npm install`
 * **Start the application:**
