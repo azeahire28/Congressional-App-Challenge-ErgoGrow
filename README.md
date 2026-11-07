@@ -34,7 +34,7 @@ ErgoGrow bridges this gap by transforming a fragmented process into a single, co
 * **Framework**: Electron (Desktop Application Runtime)
 * **Runtime & Environment**: Node.js
 * **Frontend UI**: HTML5, Modern CSS3, and Vanilla JavaScript
-* **State & Storage**: Browser LocalStorage and Asynchronous Timers
+* **State & Storage**: Browser Local Storage and Asynchronous Timers
 * **Media Assets**: Luma AI (Exercise Visualizations) and Custom UI Design
 
 ---
