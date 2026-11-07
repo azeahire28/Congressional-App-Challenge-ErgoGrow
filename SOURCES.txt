@@ -1,0 +1,102 @@
+ERGOGROW - SOURCES & REFERENCES
+
+1. RESEARCH & HEALTH
+- PMC Article (Desk Strain & Posture Studies):
+  https://pmc.ncbi.nlm.nih.gov/articles/PMC12749865/
+- PMC Article (Workplace Strain Interventions):
+  https://pmc.ncbi.nlm.nih.gov/articles/PMC12326581/
+- USF Health Public Health Article (Workplace Ergonomics):
+  https://www.usf.edu/health/public-health/news/2024/embracing-ergonomics-for-a-healthier-workplace.aspx
+- PMC Article (Ergonomic Principles & Prevention):
+  https://pmc.ncbi.nlm.nih.gov/articles/PMC12459519/
+
+2. CODE & TECH TOOLS
+- Bane Sullivan's GitHub Guide (How to Write a Good README):
+  https://github.com/banesullivan/README
+- Gemini AI (Google):
+  https://gemini.google.com
+  (Consulted for code organization, variable/function naming conventions, and structural documentation reviews)
+- Live Server Web Extension (Ritwick Dey):
+  https://github.com/ritwickdey/live-server-web-extension
+- HTML Attributes Reference Guide:
+  https://html.com/#HTML_Attributes_Reference_Guide
+- MDN Web Docs - Styling Basics:
+  https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics
+- HTML & Web Layout Crash Course:
+  https://www.youtube.com/watch?v=0W6qz0-aDaM
+- Electron First App Tutorial:
+  https://www.electronjs.org/docs/latest/tutorial/tutorial-first-app
+- Web Development Setup & Tools:
+  https://www.youtube.com/watch?v=wyP24dk8Uq4
+- VS Code HTML Documentation:
+  https://code.visualstudio.com/docs/languages/html
+- JavaScript DOM Manipulation Guide:
+  https://www.youtube.com/watch?v=fnPhJHN0jTE
+- GitHub Hello World Guide:
+  https://docs.github.com/en/get-started/using-github/hello-world
+- CSS-Tricks A Complete Guide to Flexbox:
+  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- JavaScript Logic & UI Setup:
+  https://www.youtube.com/watch?v=a9u2yZvsqHA
+- Web Dev Layouts & Event Handling:
+  https://www.youtube.com/watch?v=vNvsX1Z9Ogk
+- Asynchronous JavaScript & Timeouts:
+  https://www.youtube.com/watch?v=_9QQf-RpPlM
+- SweetAlert2 (Modal Dialog Library Reference):
+  https://sweetalert2.github.io/
+- W3Schools HTML & CSS Reference Guides:
+  https://www.w3schools.com
+- SuperSimpleDev JavaScript & Frontend Tutorials (YouTube):
+  https://www.youtube.com/@SuperSimpleDev
+- Supabase JavaScript Quickstart & Auth Guide:
+  https://supabase.com/docs/guides/auth
+- Supabase Database & Auth Setup Tutorial (YouTube):
+  https://www.youtube.com/watch?v=hVrSGKGU24g
+- JavaScript Timing Events & SetInterval Guide:
+  https://www.w3schools.com/js/js_timing.asp
+- GitHub Actions Documentation: Automating workflows with GitHub Actions:
+  https://docs.github.com/en/actions
+- Dev.to Tutorial (Preventing Supabase Database Pause using GitHub Actions):
+  https://dev.to/jps27cse/how-to-prevent-your-supabase-project-database-from-being-paused-using-github-actions-3hel
+- Electron Documentation (Native Desktop Notifications API):
+  https://www.electronjs.org/docs/latest/api/notification
+- Electron Documentation (BrowserWindow & Frameless Window Customization):
+  https://www.electronjs.org/docs/latest/api/browser-window
+
+3. LOGIC & DESIGN ASSETS
+- ChatGPT (OpenAI):
+  https://chatgpt.com
+  (Consulted for brainstorming visual design concepts, logo ideas, and structuring visual assets like tree illustrations and animated GIFs)
+- Tracking User Inactivity on Web Applications (Dev.to):
+  https://dev.to/nileslabs/how-to-track-user-inactivity-on-your-website-and-why-it-matters-2b7h
+- Dynamic Modal Content Implementation (StackOverflow):
+  https://stackoverflow.com/questions/21863462/bootstrap-modal-dynamic-content
+- Browser JavaScript Timer Throttling Explanation (Nolan Lawson):
+  https://nolanlawson.com/2025/08/31/why-do-browsers-throttle-javascript-timers/
+- MDN Web Docs - Page Visibility API (Handling Background States):
+  https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API
+- Why Browsers Throttle JavaScript Timers in Background Tabs (Nolan Lawson):
+  https://nolanlawson.com/2025/08/31/why-do-browsers-throttle-javascript-timers/
+- Multi-State Local Storage Handling (StackOverflow):
+  https://stackoverflow.com/questions/74527847/is-there-a-way-to-save-multiple-states-to-local-storage-at-the-same-time
+- Multi-User Session Management via LocalStorage (Reddit):
+  https://www.reddit.com/r/reactjs/comments/tusgy0/how-to-use_localstorage_with_multiple_users_react/
+- Electron Web Page Function Calls (StackOverflow):
+  https://stackoverflow.com/questions/28920621/how-to-call-a-javascript-function-on-a-web-page-rendered-by-electron
+- MDN Web API - Window.localStorage Reference:
+  https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+- MDN Web API - Window.setInterval Reference:
+  https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval
+- JavaScript Timer & Interval Logic Tutorials:
+  https://www.youtube.com/watch?v=4U7bsma3cVo
+  https://www.youtube.com/watch?v=3OKReTUGKBU
+- Luma AI (For Stretching GIFs):
+  app.lumalabs.ai
+- Vector Character Asset (Man with Beard):
+  https://www.magnific.com/free-vector/blond-man-with-beard_169502466.htm
+- Total Health Chiropractic (Neck Stretch References):
+  https://totalhealthchiropractic.com.au/stretches-and-strengthening-for-a-healthier-neck/
+- Vecteezy Vector Art (Shoulder Rotation Exercises):
+  https://www.vecteezy.com/vector-art/17457662-woman-demonstrates-how-to-do-shoulder-rotation-vector-flat-illustration-female-exercise-isolated-on-white-background-athletic-girl-doing-exercises
+- VectorStock (Man Massaging Temples Vector):
+  https://www.vectorstock.com/royalty-free-vector/middle-aged-man-gently-massaging-his-temples-vector-64292641
