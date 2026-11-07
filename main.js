@@ -1,30 +1,30 @@
-// Waiting for the full html doc to load before running any script logic
+// Waits for the full html doc to load before running any script logic
 document.addEventListener("DOMContentLoaded", function () {
   // Grabs references to all main container views for dynamic screen switching
   const signupView = document.getElementById("signupView");
   const loginView = document.getElementById("loginView");
   const symptomsView = document.getElementById("symptomsView");
   const dashboardView = document.getElementById("dashboardView");
-
+  
   // gets navigation triggers and buttons across authentication flows
   const showLoginLink = document.getElementById("showLoginLink");
   const showSignupLink = document.getElementById("showSignupLink");
   const createAccountButton = document.getElementById("createAccountButton");
   const loginButton = document.getElementById("loginButton");
   const logoutButton = document.getElementById("logoutButton");
-
+  
   // Grabs input fields for signup and login forms
   const signupUsernameInput = document.getElementById("signupUsernameInput");
   const signupPasswordInput = document.getElementById("signupPasswordInput");
   const loginUsernameInput = document.getElementById("loginUsernameInput");
   const loginPasswordInput = document.getElementById("loginPasswordInput");
-
+  
   // Grabs symptom cards, continue button, and tracking collection set
   const symptomCards = document.querySelectorAll(".symptom-card");
   const startWellnessButton = document.getElementById("startWellnessButton");
   const selectedSymptoms = new Set();
 
-  // Grabs toggle elements on the dashboard settings panel mapped to their respective stretch categories
+  // This grabs toggle elements on the dashboard settings panel mapped to their respective stretch categories
   const preferenceMap = {
     "Eye Strain": document.getElementById("stretchEyeToggle"),
     "Neck Tension": document.getElementById("stretchNeckToggle"),
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "Tension Headaches": document.getElementById("stretchHeadacheToggle")
   };
 
-  // Grabs custom modal elements for validation messages and stretch popups
+  // Grabs the custom popup elements for validation messages and stretch popups
   const customModal = document.getElementById("customModal");
   const modalTitle = document.getElementById("modalTitle");
   const modalMessage = document.getElementById("modalMessage");
@@ -49,10 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const resetTimerBtn = document.getElementById("resetTimerBtn");
   const timerModeBtns = document.querySelectorAll(".timer-mode-btn");
 
-  // Grabs individual stretch buttons on the dashboard settings panel
+  // This grabs individual stretch buttons on the dashboard settings panel
   const stretchActionBtns = document.querySelectorAll(".stretch-action-btn");
 
-  // Initializes numerical focus/break timer state variables
+  // Initialization of the numerical focus/break timer state variables
   let workDurationMinutes = 25;
   let breakDurationMinutes = 5;
   let timeRemainingSeconds = workDurationMinutes * 60;
@@ -106,30 +106,30 @@ document.addEventListener("DOMContentLoaded", function () {
   createAccountButton.addEventListener("click", function () {
     const username = signupUsernameInput.value.trim();
     const password = signupPasswordInput.value.trim();
-
+    
     // Checks if fields are empty
     if (username === "" || password === "") {
       showAlertModal("Missing Information", "Please enter both a username and a password.");
       return;
     }
-
+    
     // Checks if password meets minimum length requirement
     if (password.length < 6) {
       showAlertModal("Password Too Short", "Please choose a password that is at least 6 characters long.");
       return;
     }
-
+    
     // Checks if username already exists in local storage
     const userKey = "ergoUser_" + username;
     if (localStorage.getItem(userKey)) {
       showAlertModal("Username Exists", "This username already exists. Please choose another one or log in.");
       return;
     }
-
+    
     // Saves new user credentials and sets active user session
     localStorage.setItem(userKey, password);
     localStorage.setItem("currentActiveUser", username);
-
+    
     // Resets symptom selections for the new account
     selectedSymptoms.clear();
     symptomCards.forEach(function (c) {
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     startWellnessButton.setAttribute("disabled", "true");
     startWellnessButton.classList.add("disabled-btn");
-
+    
     // Transitions from signup view to the symptom selection view
     signupView.classList.add("hidden");
     symptomsView.classList.remove("hidden");
@@ -147,16 +147,16 @@ document.addEventListener("DOMContentLoaded", function () {
   loginButton.addEventListener("click", function () {
     const username = loginUsernameInput.value.trim();
     const password = loginPasswordInput.value.trim();
-
+    
     // Checks for empty inputs
     if (username === "" || password === "") {
       showAlertModal("Login Error", "Please enter your username and password.");
       return;
     }
-
+    
     const userKey = "ergoUser_" + username;
     const storedPassword = localStorage.getItem(userKey);
-
+    
     // Verifies stored password or creates fallback entry
     if (!storedPassword) {
       localStorage.setItem(userKey, password);
@@ -164,9 +164,9 @@ document.addEventListener("DOMContentLoaded", function () {
       showAlertModal("Login Error", "Incorrect password.");
       return;
     }
-
+    
     localStorage.setItem("currentActiveUser", username);
-
+    
     // Transitions to dashboard and initializes user preferences and inactivity tracker
     loginView.classList.add("hidden");
     dashboardView.classList.remove("hidden");
@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
   symptomCards.forEach(function (card) {
     card.addEventListener("click", function () {
       const symptomKey = card.getAttribute("data-symptom");
-
+      
       // Toggles visual and collection state based on click
       if (card.classList.contains("selected")) {
         card.classList.remove("selected");
@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.classList.add("selected");
         selectedSymptoms.add(symptomKey);
       }
-
+      
       // Enables or disables continue button depending on whether any symptoms are selected
       if (selectedSymptoms.size > 0) {
         startWellnessButton.removeAttribute("disabled");
@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (selectedSymptoms.size > 0) {
       const activeUser = localStorage.getItem("currentActiveUser") || "defaultUser";
       const symptomArray = Array.from(selectedSymptoms);
-
+      
       // Stores user symptoms and default toggle preferences in local storage
       localStorage.setItem("userSymptoms_" + activeUser, JSON.stringify(symptomArray));
       const initialStates = {};
@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", function () {
         initialStates[key] = symptomArray.includes(key);
       });
       localStorage.setItem("userToggleStates_" + activeUser, JSON.stringify(initialStates));
-
+      
       // Transitions from symptoms view into the main dashboard view
       symptomsView.classList.add("hidden");
       dashboardView.classList.remove("hidden");
@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const savedStates = JSON.parse(localStorage.getItem("userToggleStates_" + activeUser));
     const savedSymptoms = JSON.parse(localStorage.getItem("userSymptoms_" + activeUser)) || [];
     let anyEnabled = false;
-
+    
     Object.keys(preferenceMap).forEach(key => {
       const toggle = preferenceMap[key];
       if (toggle) {
@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     });
-
+    
     // Warns the user upon entering the dashboard if no stretches are enabled, button says "Ok"
     if (!anyEnabled) {
       showAlertModal("No Stretches Enabled", "You have no stretches toggled on so we can't give you reminders to stretch!", "Ok");
@@ -373,7 +373,7 @@ document.addEventListener("DOMContentLoaded", function () {
       modalTitle.textContent = stretch.title;
       modalMessage.innerHTML = `
         <div id="stretchContainer" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-          <span style="font-size: 12px; font-weight: 600; text-transform: uppercase; color: #232331665; background-color: #dcfce7; padding: 4px 12px; border-radius: 9999px; margin-bottom: 8px;">${stretch.category}</span>
+          <span style="font-size: 12px; font-weight: 600; text-transform: uppercase; color: #5B7553; background-color: #dcfce7; padding: 4px 12px; border-radius: 9999px; margin-bottom: 8px;">${stretch.category}</span>
           <div id="stretchTimer" style="font-size: 30px; font-weight: 800; color: #111827; margin: 8px 0;">00:${timeRemaining < 10 ? "0" + timeRemaining : timeRemaining}</div>
           <div style="width: 100%; height: 180px; background-color: #f9fafb; border-radius: 12px; overflow: hidden; display: flex; align-items: center; justify-content: center; margin: 8px 0; border: 1px solid #f3f4f6;">
             <video src="${stretch.videoSrc}" autoplay loop muted playsinline style="max-height: 100%; max-width: 100%; object-fit: contain; pointer-events: none;"></video>
@@ -421,11 +421,10 @@ document.addEventListener("DOMContentLoaded", function () {
     renderCurrentCategoryStretch();
   }
 
-  // Renders and runs active full-routine stretch cards inside the modal container (Filtered by active toggles in top-to-bottom order with 5-second alternating bursts for multi-exercise categories)
+  // Renders and runs active full-routine stretch cards inside the modal container
   function startStretchSession() {
     const activeUser = localStorage.getItem("currentActiveUser") || "defaultUser";
     const toggles = getToggleStates(activeUser);
-
     const categoryOrder = Object.keys(preferenceMap);
     activeStretches = [];
 
@@ -441,23 +440,21 @@ document.addEventListener("DOMContentLoaded", function () {
             description: catStretches[0].description
           });
         } else if (catStretches.length >= 2) {
-          // Multi-exercise categories: alternate back and forth in 5-second bursts (3 times each = 30s total)
-          for (let i = 0; i < 3; i++) {
-            activeStretches.push({
-              category: catStretches[0].category,
-              title: catStretches[0].title,
-              videoSrc: catStretches[0].videoSrc,
-              durationSeconds: 5,
-              description: catStretches[0].description
-            });
-            activeStretches.push({
-              category: catStretches[1].category,
-              title: catStretches[1].title,
-              videoSrc: catStretches[1].videoSrc,
-              durationSeconds: 5,
-              description: catStretches[1].description
-            });
-          }
+          // Multi-exercise categories: 15 seconds for each stretch sequentially (total 30 seconds)
+          activeStretches.push({
+            category: catStretches[0].category,
+            title: catStretches[0].title,
+            videoSrc: catStretches[0].videoSrc,
+            durationSeconds: 15,
+            description: catStretches[0].description
+          });
+          activeStretches.push({
+            category: catStretches[1].category,
+            title: catStretches[1].title,
+            videoSrc: catStretches[1].videoSrc,
+            durationSeconds: 15,
+            description: catStretches[1].description
+          });
         }
       }
     });
@@ -473,10 +470,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const currentStretch = activeStretches[routineIndex];
     stretchTimeRemaining = currentStretch.durationSeconds;
+
     modalTitle.textContent = currentStretch.title;
     modalMessage.innerHTML = `
       <div id="stretchContainer" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-        <span style="font-size: 12px; font-weight: 600; text-transform: uppercase; color: #232331665; background-color: #dcfce7; padding: 4px 12px; border-radius: 9999px; margin-bottom: 8px;">${currentStretch.category}</span>
+        <span style="font-size: 12px; font-weight: 600; text-transform: uppercase; color: #5B7553; background-color: #dcfce7; padding: 4px 12px; border-radius: 9999px; margin-bottom: 8px;">${currentStretch.category}</span>
         <div id="stretchTimer" style="font-size: 30px; font-weight: 800; color: #111827; margin: 8px 0;">00:${stretchTimeRemaining < 10 ? "0" + stretchTimeRemaining : stretchTimeRemaining}</div>
         <div style="width: 100%; height: 180px; background-color: #f9fafb; border-radius: 12px; overflow: hidden; display: flex; align-items: center; justify-content: center; margin: 8px 0; border: 1px solid #f3f4f6;">
           <video src="${currentStretch.videoSrc}" autoplay loop muted playsinline style="max-height: 100%; max-width: 100%; object-fit: contain; pointer-events: none;"></video>
@@ -484,6 +482,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <p style="color: #4b5563; font-size: 14px; background-color: #f9fafb; padding: 12px; border-radius: 12px; border: 1px solid #e5e7eb; margin-top: 8px;">${currentStretch.description}</p>
       </div>
     `;
+
     customModal.classList.remove("hidden");
     if (stretchInterval) clearInterval(stretchInterval);
 
@@ -494,6 +493,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const formattedSecs = stretchTimeRemaining < 10 ? "0" + stretchTimeRemaining : stretchTimeRemaining;
         timerElement.textContent = `00:${formattedSecs}`;
       }
+
       if (stretchTimeRemaining <= 0) {
         clearInterval(stretchInterval);
         if (!isRestingPhase) {
@@ -523,6 +523,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <p class="text-gray-400 text-xs mt-3">Reset your posture and take a breath.</p>
       </div>
     `;
+
     stretchInterval = setInterval(() => {
       stretchTimeRemaining--;
       const timerElement = document.getElementById("stretchTimer");
@@ -572,12 +573,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const activeUser = localStorage.getItem("currentActiveUser") || "defaultUser";
     const toggles = getToggleStates(activeUser);
     const anyEnabled = Object.values(toggles).some(val => val === true);
-
     if (!anyEnabled) {
       showAlertModal("Stretches Required", "You can't start a timer unless you have stretches on!", "Ok");
       return;
     }
-
     if (isTimerRunning) return;
     isTimerRunning = true;
     timerEndTime = Date.now() + (timeRemainingSeconds * 1000);
@@ -592,7 +591,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         clearInterval(timerInterval);
         isTimerRunning = false;
-
+        
         // Handles transitions between work phase and stretch break phase
         if (isWorkPhase) {
           isWorkPhase = false;
@@ -691,6 +690,7 @@ document.addEventListener("DOMContentLoaded", function () {
           modal.classList.remove("hidden");
         }
       }
+      
       // Restart the interval loop for the next 15 minutes
       resetInactivityTimer();
     }, inactivityTimeout);
